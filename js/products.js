@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 
 
-                document.getElementById("dafney").innerHTML += `
+                document.getElementById("productos").innerHTML += `
 <div class="list-group-item list-group-item-action">
 <div class="row">
     <div class="col-3">
