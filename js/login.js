@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             window.location.href="indexx.html";
         }
 
-     
+     localStorage.setItem("mail", mail);
     });
 
    

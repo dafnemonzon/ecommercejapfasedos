@@ -17,10 +17,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 let cost = product.cost
                 let currency = product.currency
                 let imgs = product.imgSrc
-                let soldCount = product.soldCount
+              
 
-                console.log(result);
-
+        
 
 
                 document.getElementById("productos").innerHTML += `
@@ -47,4 +46,5 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         })
 
-});
+}); 
+

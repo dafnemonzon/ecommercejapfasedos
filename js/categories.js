@@ -133,4 +133,5 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         showCategoriesList();
     });
-});
+    
+}); document.getElementById("userFace").innerHTML= localStorage.getItem("mail");
