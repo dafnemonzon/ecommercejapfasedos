@@ -2,9 +2,9 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
-    let url = "https:japdevdep.github.io/ecommerce-api/product/all.json";
+    //let url = "https:japdevdep.github.io/ecommerce-api/product/all.json";
 
-    fetch(url)
+    fetch(PRODUCTS_URL)
         .then(response => response.json())
         .then(result => {
 
