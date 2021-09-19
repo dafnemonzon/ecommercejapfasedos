@@ -13,6 +13,8 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -26,12 +28,130 @@
     </div>
   </nav>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+ 
+ <!-- mostrarinformación detallada del producto-->
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Descripción del Producto</h2>
+        <p class="lead">
+          Encontrarás aquí toda la información del producto seleccionada.
+        </p>
+        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
+          seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+      </div>
+      <h3 id="productName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="productDescription"></p>
+        </dd>
+
+        <dt>Moneda</dt>
+        <dd>
+          <p id="productcurrency"></p>
+        </dd>
+        <dt>Cantidad de productos en la categoría</dt>
+        <dd>
+          <p id="productCount"></p>
+        </dd>
+
+        <div class="banner-section" id="productscore">
+        </div>
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+             <!-- mostrar imágenes-->
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+        </dd>
+      </dl> <br>
+      <!-- ingresar puntuación -->
+      <hr class=" my-3">
+      <div class="text-right  ">
+        <input id=rating0 type=radio value=0 name=rating checked />
+
+        <label class=star for=rating1>
+          <svg viewBox="0 0 300 275">
+            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+          </svg>
+        </label>
+        <input id=rating1 type=radio value=1 name=rating />
+
+        <label class=star for=rating2>
+          <svg viewBox="0 0 300 275">
+            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+          </svg>
+        </label>
+        <input id=rating2 type=radio value=2 name=rating />
+
+        <label class=star for=rating3>
+          <svg viewBox="0 0 300 275">
+            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+          </svg>
+        </label>
+        <input id=rating3 type=radio value=3 name=rating />
+
+        <label class=star for=rating4>
+          <svg viewBox="0 0 300 275">
+            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+          </svg>
+        </label>
+        <input id=rating4 type=radio value=4 name=rating />
+
+        <label class=star for=rating5>
+          <svg viewBox="0 0 300 275">
+            <path stroke="#605a00" stroke-width="15" d="M150 25l29 86h90l-72 54 26 86-73-51-73 51 26-86-72-54h90z" />
+          </svg>
+        </label>
+        <input id=rating5 type=radio value=5 name=rating />
+
+        <!-- por último el label del rating 0 ( sin calificar ) -->
+        <label class=reset for=rating0>reset</label>
+
+        <div id=texto>sin calificar</div>
+
+        <br>
+      </div>
+<!-- ingresar una pregunta -->
+      <h5 aria-hidden="true" class="ui-pdp-questions__subtitle--question">Haz una pregunta</h5>
+      <form class="ui-pdp-questions__form" method="POST"><input type="hidden" name="itemId" value="MLU474727469">
+        <div class="ui-pdp-questions__content"><label
+            class="andes-form-control andes-form-control--textfield andes-form-control--multiline andes-form-control--default ui-pdp-questions__input">
+            <div class="andes-form-control__control"><textarea id="question" name="question" autocomplete="off" rows="1"
+                class="andes-form-control__field" maxlength="2000"
+                style="overflow-x: hidden; overflow-wrap: break-word; height: 48px; width: 600px;"
+                placeholder="Escribe tu pregunta..."></textarea></div>
+            <div class="andes-form-control__bottom"><span
+                class="andes-form-control__message andes-form-control__message-fixed"></span></div>
+          </label></div><button type="submit" style="  width: 160px;"
+          class="andes-button ui-pdp-questions__button side left andes-button--large andes-button--loud"><span
+            class="andes-button__content">Preguntar</span></button>
+      </form>
+      <br>
+      <!-- mostrar las preguntas realizadas anteriormente -->
+      <hr class="my-3">
+      <div class="ui-pdp-questions__questions-list">
+        <h3 class="ui-pdp-questions__questions-list__title">Últimas realizadas</h3>
+      </div>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+      <div class="list-group" id="productcomments">
+
+      </div>
+
+      <hr class="my-3">
+
+
+
+      <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>
+
+  </div>
+
+  </div>
   </div>
   <footer class="text-muted">
     <div class="container">

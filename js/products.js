@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
-  const ORDER_ASC_BY_NAME = "AZ";
-  const ORDER_DESC_BY_NAME = "ZA";
+  const ORDER_ASC_BY_PRICE = "Precio";
+  const ORDER_DESC_BY_PRICE = "precio";
   const ORDER_BY_PROD_COUNT = "Cant.";
 
 
   function sortmyproducts(criteria, array) {
     let result = [];
-    if (criteria === ORDER_ASC_BY_NAME) {
+    if (criteria === ORDER_ASC_BY_PRICE) {
       result = array.sort(function (a, b) {
         if (a.cost < b.cost) { return -1; }
         if (a.cost > b.cost) { return 1; }
         return 0;
       });
-    } else if (criteria === ORDER_DESC_BY_NAME) {
+    } else if (criteria === ORDER_DESC_BY_PRICE) {
       result = array.sort(function (a, b) {
         if (a.cost > b.cost) { return -1; }
         if (a.cost < b.cost) { return 1; }
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   }
 
 
-  let array = [];
+ 
   let productos = "";
   function productList(lista) {
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             </div>
             <div class="col">
                 <div class="d-flex w-100 justify-content-between">
-                    <h4 class="mb-1">`+ name + `</h4>
+                    <h4 class="mb-1 ">`+ name + `</h4> <a  href="file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Desktop/laal/obligatorio/ecommercejapfasedos/product-info.html#" class=" list-group-item-action ">  </a>
                     <small class="text-muted">` + currency + ' ' + cost + `</small>
                 </div>
             
@@ -118,14 +118,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     window.location.href = "products.html";
   }
   document.getElementById("sortAsc").onclick = function (e) {
-   let listaordenada =  sortmyproducts(ORDER_ASC_BY_NAME, autos);
+   let listaordenada =  sortmyproducts(ORDER_ASC_BY_PRICE, autos);
     productos = "";
     productos = productList(listaordenada);
     document.getElementById("producto").innerHTML = productos;
 
   }
   document.getElementById("sortDesc").onclick = function (e) {
-    let listaordenada = sortmyproducts(ORDER_DESC_BY_NAME, autos);
+    let listaordenada = sortmyproducts(ORDER_DESC_BY_PRICE, autos);
     productos = "";
     productos = productList(listaordenada);
     document.getElementById("producto").innerHTML = productos;
@@ -137,6 +137,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
     document.getElementById("producto").innerHTML = productos;
   }
 
+  document.getElementById("infobtn").addEventListener("click", function(e){
+       
+    window.location.href="product-info.html";
 
+
+
+});
 
 }); document.getElementById("userFace").innerHTML = localStorage.getItem("mail");
