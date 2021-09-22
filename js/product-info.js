@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
             <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + images + `" alt="">
+              <a class="cinta uno">  <img class="img-fluid img-thumbnail" src="` + images + `" alt=""> </a>
             </div>
         </div>
         `
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
     }
   }
-//fetch para mostrar los datos de JSON de product-info
+//Petición web a una URL ( identificador del producto - toda la información)
   fetch(PRODUCT_INFO_URL)
     .then(response => response.json())
     .then(data => {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     })
 
-//fetch para mostrar las preguntas realizadas anteriormente del JSON prodct_info_comments_url
+//Petición web a una URL (comentarios y puntuación precargados )
   let comments = "";
   fetch(PRODUCT_INFO_COMMENTS_URL)
     .then(response => response.json())
@@ -108,4 +108,32 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
    
   }
-});
+  //funcion para mostrar los productos relacionados
+  function showRelatedProducts(array) {
+    let related = "";
+
+    for (let i = 0; i < array.length; i++) {
+      
+     let imagen1= array[1].imgSrc
+let imagen2 = array[3].imgSrc
+     related = `
+        <div class="col-lg-3 col-md-4 col-6">
+            <div class="d-block mb-4 h-100"> <p> <b> PRODUCTOS RELACIONADOS </b> </p>
+               <img class="img-fluid img-thumbnail" src="` + imagen1 + `"  alt="car1">
+              <img class="img-fluid img-thumbnail" src="` + imagen2 + `" alt="car2"> 
+            </div>
+        </div>
+        `
+
+      document.getElementById("relatedproducts").innerHTML =  related;
+    }
+  }
+  fetch(PRODUCTS_URL)
+    .then(response => response.json())
+    .then(data => { 
+array = data
+    //se llama a la función de las imagenes para mostarlas
+    showRelatedProducts(data);
+
+    })
+});document.getElementById("userFace").innerHTML = localStorage.getItem("mail");
