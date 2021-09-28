@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
             </div>
             <div class="col">
                 <div class="d-flex w-100 justify-content-between">
-                    <h4 class="mb-1 ">`+ name + `</h4> <a  href="file:///C:/Users/Admin.DESKTOP-HT5Q6EV/Desktop/laal/obligatorio/ecommercejapfasedos/product-info.html#" class=" list-group-item-action ">  </a>
+                    <h4 class="mb-1 ">`+ name + `</h4> <a  href="product-info.html" class=" list-group-item-action ">  </a>
                     <small class="text-muted">` + currency + ' ' + cost + `</small>
                 </div>
             
