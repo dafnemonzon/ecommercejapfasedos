@@ -45,3 +45,4 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
 }); document.getElementById("userFace").innerHTML= localStorage.getItem("mail");
+localStorage.clear();

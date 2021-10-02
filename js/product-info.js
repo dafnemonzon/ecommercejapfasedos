@@ -10,14 +10,15 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let htmlContentToAppend = "";
 
     for (let i = 0; i < array.length; i++) {
-      let images = array[i];
+      let images0 = array[i];
 
       htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
             <div class="d-block mb-4 h-100">
-              <a class="cinta uno">  <img class="img-fluid img-thumbnail" src="` + images + `" alt=""> </a>
+              <a class="cinta uno">  <img class="img-fluid img-thumbnail"  src="` + images0 + `" alt=""> </a>
             </div>
         </div>
+       
         `
 
       document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
