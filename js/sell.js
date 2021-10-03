@@ -146,4 +146,4 @@ document.addEventListener("DOMContentLoaded", function(e){
         if (e.preventDefault) e.preventDefault();
             return false;
     });
-});
+});document.getElementById("userFace").innerHTML= localStorage.getItem("mail");

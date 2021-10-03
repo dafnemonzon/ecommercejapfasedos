@@ -18,4 +18,4 @@ document.addEventListener("DOMContentLoaded", function(e){
         
   
         
-});
+});localStorage.clear();

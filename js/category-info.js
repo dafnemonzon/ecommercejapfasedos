@@ -42,4 +42,4 @@ document.addEventListener("DOMContentLoaded", function(e){
             showImagesGallery(category.images);
         }
     });
-});
+});document.getElementById("userFace").innerHTML = localStorage.getItem("mail");
